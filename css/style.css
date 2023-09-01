@@ -1,3 +1,152 @@
 :root {
   --main-body: #000;
 }
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #FFF;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4243dd80;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--main-color);
+}
+
+body {
+  background-color: var(--main-body);
+}
+
+.loading-screen {
+  z-index: 3;
+  display: flex;
+}
+
+.loading-screen i {
+  color: white;
+}
+
+/* start options */
+
+
+.options-menu {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  z-index: 2;
+  background-color: rgb(156, 62, 62);
+  width: 330px;
+  height: 100vh;
+  border-right: 1px solid #ccc;
+}
+
+.options-menu .left-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 50px;
+  bottom: 0;
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.options-menu .right-side {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  bottom: 0;
+  background-color: white;
+  padding: 10px 5px;
+}
+
+.options-menu .left-side .links-line {
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 50px auto;
+  gap: 1rem;
+
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.options-menu .left-side .links-line li {
+  position: absolute;
+  top: 100%;
+  cursor: pointer;
+}
+
+#close, #bars,
+.options-menu i {
+  cursor: pointer;
+}
+
+/* end options */
+
+/* start meals  */
+
+.meals {
+  margin-left:50px;
+}
+
+.simple-card {
+  overflow: hidden;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.simple-card:hover .meal-layer {
+  top:0;
+}
+
+.meal-layer {
+  background-color: #ccc;
+  color: white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: all 0.25s ease 0s;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.6px);
+  -webkit-backdrop-filter: blur(6.6px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 1rem;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.meal-layer h3,
+.meal-layer p {
+  text-shadow: 0 0 4px black;
+}
+
+/* ::placeholder {
+  color: red;
+  opacity: 1; 
+}
+
+:-ms-input-placeholder { 
+  color: red;
+}
+
+::-ms-input-placeholder {
+  color: red;
+} */
+/* end meals  */
