@@ -1,9 +1,9 @@
 // variables 
 
-let nameSearch        = document.querySelector('.name-search');
+let nameSearch = document.querySelector('.name-search');
 let firstLetterSearch = document.querySelector('.firstletter-search');
-let searchInputs      = document.querySelector('.search-inputs');
-let loadingScreen     = document.querySelector('.loading-screen');
+let searchInputs = document.querySelector('.search-inputs');
+let loadingScreen = document.querySelector('.loading-screen');
 
 // api vars
 
@@ -11,7 +11,7 @@ let loadingScreen     = document.querySelector('.loading-screen');
 
 // start Putting Data to Html
 function showSearchInput() {
-  searchInputs.classList.contains('d-none') ? searchInputs.classList.remove('d-none')  : searchInputs.classList.add('d-none')
+  searchInputs.classList.contains('d-none') ? searchInputs.classList.remove('d-none') : searchInputs.classList.add('d-none')
 }
 
 function hideLoader() {
@@ -31,7 +31,7 @@ function showSearch(data) {
           </div>
         </div>
       </div>
-    `;    
+    `;
   }
   hideLoader();
   $('.show-card').html(output);
@@ -51,7 +51,7 @@ function showCategories(data) {
           </div>
         </div>
       </div>
-    `;    
+    `;
   }
 
   $('.show-card').html(output);
@@ -70,7 +70,7 @@ function showArea(data) {
           <h3 class="text-light"><i class="fas fa-house-laptop fa-fw"></i> ${data[i].strArea}</h3>
         </div>
       </div>
-    `;    
+    `;
   }
 
   $('.show-card').html(output);
@@ -89,50 +89,14 @@ function showIngredients(data) {
           <h3 class="text-light text-center"><i class="fas fa-house-laptop fa-fw"></i> ${data[i].strIngredient}</h3>
         </div>
       </div>
-    `;    
+    `;
   }
 
   $('.show-card').html(output);
 
 }
 
-function showContactForm() {
 
-  let output = `
-    <form action="" class="form-control py-4 bg-black border-black d-flex justify-content-center align-items-center" style="height: 100vh;">
-      <div class="row w-100">
-        <div class="col-md-12 col-lg-6">
-          <div class="form-group mb-3">
-            <input class="form-control " type="text" name="name" placeholder="Enter Your Name">
-          </div>
-          <div class="form-group mb-3">
-            <input class="form-control" type="text" name="phone" placeholder="Enter Your Phone">
-          </div>
-          <div class="form-group mb-3">
-            <input class="form-control" type="password" name="password" placeholder="Enter Your Password">
-          </div> 
-        </div>
-        <div class="col-md-12 col-lg-6 mb-3">
-          <div class="form-group mb-3">
-            <input class="form-control" type="email" name="email" placeholder="Enter Your Email">
-          </div>
-          <div class="form-group mb-3">
-            <input class="form-control" type="text" name="age" placeholder="Enter Your Age">
-          </div>
-          <div class="form-group mb-3">
-            <input class="form-control" type="password" name="repasword" placeholder="Confirm Password">
-          </div>
-        </div>
-        <div class="col-md-12 d-flex justify-content-center align-items-center">
-          <button class="btn btn-primary" type="submit">Send</button>
-        </div>
-      </div>
-    </form>
-  `;
-
-  $('.show-card').html(output);
-
-}
 
 // End Putting Data to Html
 
@@ -153,7 +117,7 @@ async function getMealsByName(name) {
 }
 
 // first thing should happen when the page loads
-getMealsByName('a');
+// getMealsByName('a');
 
 async function getCategory() {
   try {
@@ -192,5 +156,7 @@ async function getIngredients() {
 }
 
 // EndApi Fetching 
+
+
 
 

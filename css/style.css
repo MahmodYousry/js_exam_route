@@ -23,6 +23,7 @@ body {
 .loading-screen {
   z-index: 3;
   display: flex;
+  display: none;
 }
 
 .loading-screen i {
